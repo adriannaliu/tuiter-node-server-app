@@ -8,10 +8,10 @@ import UserController
 import TuitsController
   from "./controllers/tuits/tuits-controller.js";
 
-const server = express();
-server.use(cors());
-server.use(express.json());
-TuitsController(server);
-HelloController(server);
-UserController(server);
-server.listen(process.env.PORT || 4000);
+const app = express();
+app.use(cors());
+app.use(express.json());
+TuitsController(app);
+HelloController(app);
+UserController(app);
+app.listen(process.env.PORT || 4000);
