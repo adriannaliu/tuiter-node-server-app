@@ -7,6 +7,9 @@ import UserController
   from "./controllers/users/users-controller.js";
 import TuitsController
   from "./controllers/tuits/tuits-controller.js";
+import mongoose from "mongoose";
+
+mongoose.connect('mongodb://localhost:27017/tuiter');
 
 const index = express();
 index.use(cors());
